@@ -1,6 +1,9 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { BsArrowRight } from 'react-icons/bs'
 import { Button } from '@/components/Button'
+import { Input } from '@/components/Input'
+import { EnterWithSocialMedia } from '@/components/EnterWithSocialMedia'
 
 import backgroundImage from '../../../../public/AbstractBackground.svg'
 
@@ -12,20 +15,22 @@ export default function Page(){
             className='w-1/2 h-full object-cover bg-no-repeat absolute top-0 right-0'
             loading='lazy'
         />
-        <div className='w-3/5 h-full rounded-r-2xl z-10 p-20 flex flex-col items-start justify-center gap-6 bg-white'>
+        <div className='w-1/2 h-full rounded-r-2xl z-10 p-20 flex flex-col items-start justify-center gap-6 bg-white'>
             <h1 className='text-4xl font-semibold text-black'>Login</h1>
-            <form className='w-full flex flex-col items-center justify-start gap-8'>
-                <input 
-                    type='email'
+            <form className='w-full flex flex-col items-center justify-start gap-6'>
+                <Input 
+                    id='email' 
+                    label='E-mail' 
                     placeholder='youremail@example.com' 
-                    className='w-full px-4 py-3 border rounded-md border-[##4A4A4A] text-sm text-[##4A4A4A]'
+                    type='email'
                 />
-                <input 
-                    type='password'
+                <Input 
+                    id='password' 
+                    label='Sua senha' 
                     placeholder='********' 
-                    className='w-full px-4 py-3 border rounded-md border-[##4A4A4A] text-sm text-[##4A4A4A]'
-                /> 
-                <Button>
+                    type='password'
+                />
+                <Button type='submit'>
                     Continuar
                     <BsArrowRight className='text-xl font-semibold mt-[2px]'/>
                 </Button>
@@ -35,11 +40,10 @@ export default function Page(){
                 <span className="text-[#4A4A4A] text-xs">ou</span>
                 <hr className='w-full'/>
             </div>
-            <div className='w-full flex items-center justify-center gap-5'>
-                <span>G</span>
-                <span>A</span>
-                <span>F</span>
-            </div>
+            <EnterWithSocialMedia /> 
+            <p className='self-stretch text-center text-[#5E5E5E] text-xs'>
+                Não possui uma conta ainda? <Link href='#' className='text-violet-600 underline'>Crie uma!</Link>
+            </p>
         </div>
     </div>
 }

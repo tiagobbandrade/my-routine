@@ -12,7 +12,7 @@ export default function Page(){
         <Image 
             src={backgroundImage} 
             alt='background image'
-            className='w-1/2 h-full object-cover bg-no-repeat absolute top-0 right-0'
+            className='w-2/3 h-full object-cover bg-no-repeat absolute top-0 right-0'
             loading='lazy'
         />
         <div className='w-1/2 h-full rounded-r-2xl z-10 p-20 flex flex-col items-start justify-center gap-6 bg-white'>

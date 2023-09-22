@@ -47,7 +47,8 @@ export default function Page(){
             </div>
             <EnterWithSocialMedia /> 
             <p className='self-stretch text-center text-[#5E5E5E] text-sm'>
-                Não possui uma conta ainda? <Link href='/auth/register' className='text-violet-600 underline visited:text-violet-600'>Crie uma!</Link>
+                Não possui uma conta ainda? 
+                <Link href='/auth/register' className='text-violet-600 underline visited:text-violet-600'>Crie uma!</Link>
             </p>
         </div>
     </div>

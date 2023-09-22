@@ -1,4 +1,5 @@
 import { InputHTMLAttributes } from "react";
+import { twMerge } from "tailwind-merge";
 
 interface TInput extends InputHTMLAttributes<HTMLInputElement> {
     placeholder: string,
@@ -6,9 +7,9 @@ interface TInput extends InputHTMLAttributes<HTMLInputElement> {
     label: string,
 }
 
-export function Input({id, placeholder, label, ...props}: TInput){
+export function Input({id, placeholder, label, className,...props}: TInput){
     return (
-        <div className="w-full flex flex-col items-start justify-center">
+        <div className={twMerge("w-full flex flex-col items-start justify-center", className)}>
             <label htmlFor={id} className="text-sm text-gray-400">
                 {label}
             </label>

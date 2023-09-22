@@ -17,10 +17,10 @@ export default function Page(){
         <Image 
             src={backgroundImage} 
             alt='background image'
-            className='animate-appear bg-cover bg-center bg-no-repeat absolute top-0 left-0'
+            className='animate-appearOpacity bg-cover bg-center bg-no-repeat absolute top-0 left-0'
             priority
         />
-        <div className='animate-appear w-1/2 h-full rounded-l-2xl z-10 p-20 flex flex-col items-start justify-center gap-6 bg-white'>
+        <div className='animate-appearFromTop w-1/2 h-full rounded-l-2xl z-10 p-20 flex flex-col items-start justify-center gap-6 bg-white'>
             <h1 className='text-4xl font-semibold text-black'>Criar conta</h1>
             <form className='w-full flex flex-col items-center justify-start gap-4'>
                 <Input 

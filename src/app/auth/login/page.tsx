@@ -1,3 +1,4 @@
+'use client'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Metadata } from 'next'
@@ -8,7 +9,7 @@ import { EnterWithSocialMedia } from '@/components/EnterWithSocialMedia'
 
 import backgroundImage from '../../../../public/AbstractBackground.svg'
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
     title: 'My Routine - Entre na sua conta',
 }
 
@@ -17,12 +18,12 @@ export default function Page(){
         <Image 
             src={backgroundImage} 
             alt='background image'
-            className='animate-appear bg-cover bg-center bg-no-repeat absolute top-0 right-0'
+            className='animate-appearOpacity bg-cover bg-center bg-no-repeat absolute top-0 right-0'
             priority
         />
-        <div className='animate-appear w-1/2 h-full rounded-r-2xl z-10 p-20 flex flex-col items-start justify-center gap-6 bg-white'>
+        <div className='animate-appearFromTop w-1/2 h-full rounded-r-2xl z-10 p-20 flex flex-col items-start justify-center gap-6 bg-white'>
             <h1 className='text-4xl font-semibold text-black'>Entrar</h1>
-            <form className='w-full flex flex-col items-center justify-start gap-6'>
+            <form onSubmit={(e) => e.preventDefault()} className='w-full flex flex-col items-center justify-start gap-6'>
                 <Input 
                     id='email' 
                     label='E-mail' 

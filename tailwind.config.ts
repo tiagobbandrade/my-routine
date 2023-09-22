@@ -9,13 +9,18 @@ const config: Config = {
   theme: {
     extend: {
       keyframes: {
-        appear: {
+        appearFromTop: {
           '0%': {transform: 'translateY(-999px)', opacity: '0'},
           '100%': {transform: 'translateY(0)', opacity: '1'}
+        },
+        appearOpacity: {
+          '0%': {opacity: '0'},
+          '100%': {opacity: '1'}
         }
       },
       animation: {
-        appear: 'appear 1.5s ease-in-out forwards',
+        appearFromTop: 'appearFromTop 1.3s ease-in-out forwards',
+        appearOpacity: 'appearOpacity 1.5s ease-in-out forwards',
       },
     },
   },

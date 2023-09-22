@@ -12,7 +12,7 @@ export function EnterWithSocialMedia(){
                 <BsFacebook className='text-[#1877F2]'/>
             </SocialMediaButton>
             <SocialMediaButton>
-                <BsApple clasName='text-[#121212]' />
+                <BsApple className='text-[#121212]' />
             </SocialMediaButton>
         </div>
     )

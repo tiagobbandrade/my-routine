@@ -20,7 +20,7 @@ export function EnterWithSocialMedia(){
 
 function SocialMediaButton({children}: {children: ReactNode}){
     return (
-        <button className='p-3 rounded-md border border-gray-100 shadow-sm shadow-[#12121210]'>
+        <button className='p-3 rounded-md border border-gray-200 shadow-sm shadow-[#12121210]'>
             {children}
         </button>
     )
